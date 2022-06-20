@@ -33,6 +33,18 @@ Jako rozwiązanie należy wysłać jeden plik tekstowy zawierający ponumerowane
 	curl -XDELETE -i http://localhost:8098/buckets/s16852/keys/car2
 
 7.	Spróbuj pobrać z bazy wartość, która nie istnieje w tej bazie. 
+	
+	curl -i http://localhost:8098/buckets/s16852/keys/car2
+	
 8.	Dodaj do bazy 1 dokument json (zawierający 1 pole), ale nie specyfikuj klucza. 
+
+	curl -XPOST -i -H "Content-Type: application/json" -d '{"key": "value"}' http://localhost:8098/buckets/s16852/keys/
+
 9.	Pobierz z bazy element z zadania 8. 
+	
+	curl -i http://localhost:8098/buckets/s16852/keys?keys=true
+
 10.	Usuń z bazy element z zadania 8. 
+
+	curl -XDELETE -i http://localhost:8098/buckets/s16852/keys/SrHm2thKMLjKDznUswQvHVOgliN
+	 
