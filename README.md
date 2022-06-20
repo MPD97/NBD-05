@@ -13,8 +13,17 @@ Jako rozwiązanie należy wysłać jeden plik tekstowy zawierający ponumerowane
 	 curl -XPOST -i -H "Content-Type: application/json" -d '{"manufacturer": "Ford", "model": "C-max", "horsePower": 150, "imported": true }' http://localhost:8098/buckets/s16852/keys/car5
 
 2.	Pobierz z bazy jedną z dodanych przez Ciebie wartości. 
+
+	curl -i http://localhost:8098/buckets/s16852/keys/car2
+
 3.	Zmodyfikuj jedną z wartości – dodając dodatkowe pole do dokumentu. 
+
+	curl -XPUT -i -H "Content-Type: application/json" -d '{"manufacturer": "Ford", "model": "Fiesta", "horsePower": 98, "imported": false, "maxSpeed": 180 }' http://localhost:8098/buckets/s16852/keys/car2
+
 4.	Zmodyfikuj jedną z wartości – usuwając jedną pole z wybranego dokumentu. 
+	
+	curl -XPUT -i -H "Content-Type: application/json" -d '{"manufacturer": "Ford", "model": "Fiesta", "horsePower": 98, "maxSpeed": 180 }' http://localhost:8098/buckets/s16852/keys/car2
+
 5.	Zmodyfikuj jedną z wartości – zmieniając wartość jednego z pól.  
 6.	Usuń jeden z dokumentów z bazy. 
 7.	Spróbuj pobrać z bazy wartość, która nie istnieje w tej bazie. 
