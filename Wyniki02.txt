@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8iikmPqGic4MgQomMeawM+c9U7vBlAQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s16852>; rel="up"
+Last-Modified: Mon, 20 Jun 2022 12:39:11 GMT
+ETag: "UASskOu2KWGn4p5uPGxP8"
+Date: Mon, 20 Jun 2022 12:41:37 GMT
+Content-Type: application/json
+Content-Length: 69
+
+{manufacturer: Ford, model: Fiesta, horsePower: 98, imported: false }
