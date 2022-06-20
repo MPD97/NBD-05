@@ -25,7 +25,13 @@ Jako rozwiązanie należy wysłać jeden plik tekstowy zawierający ponumerowane
 	curl -XPUT -i -H "Content-Type: application/json" -d '{"manufacturer": "Ford", "model": "Fiesta", "horsePower": 98, "maxSpeed": 180 }' http://localhost:8098/buckets/s16852/keys/car2
 
 5.	Zmodyfikuj jedną z wartości – zmieniając wartość jednego z pól.  
+
+	curl -XPUT -i -H "Content-Type: application/json" -d '{"manufacturer": "Ford", "model": "Fiesta", "horsePower": 120, "maxSpeed": 180 }' http://localhost:8098/buckets/s16852/keys/car2
+
 6.	Usuń jeden z dokumentów z bazy. 
+
+	curl -XDELETE -i http://localhost:8098/buckets/s16852/keys/car2
+
 7.	Spróbuj pobrać z bazy wartość, która nie istnieje w tej bazie. 
 8.	Dodaj do bazy 1 dokument json (zawierający 1 pole), ale nie specyfikuj klucza. 
 9.	Pobierz z bazy element z zadania 8. 
